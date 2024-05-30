@@ -1,0 +1,92 @@
+// VARIABILI
+$text-size: 12px;
+$text-color: #333;
+$link-color: #999;
+
+// ANNIDAMENTO METODO NESTING
+#main {
+font-size: $text-size;
+color: $text-color;
+a {
+color: $link-color;
+}
+}
+
+
+// METODO CON &
+.link {
+    color: black;
+    &:hover {
+    color: red;
+    }
+}
+
+
+// METODO MIXIN - INCLUDE
+@mixin my-display-flex {
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+}
+.div_1 {
+        @include my-display-flex;
+        // other rules
+}
+
+
+// ESEMPIO MIXIN 
+// creo tre container con variabile width do a tutti i container la larghezza
+@mixin container($width: 1000px) {
+    margin: 0 auto;
+    width: $width;
+    border: 1px solid black;
+}
+
+.container_big {
+    // se non c'è un dato nel container allora prende quello di default (1000px)
+    @include container();
+}
+
+.container_medium {
+    @include container(780px);
+}
+
+.container_small {
+    @include container(520px);
+}
+
+// quindi tutti e tre i container avranno margin, width, border. guarda css standard
+
+//  METODO EXTEND
+%message-shared {
+    border: 1px solid #ccc;
+    padding: 10px;
+    color: #333;
+  }
+  
+  // This CSS won't print because %equal-heights is never extended.
+  %equal-heights {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .message {
+    @extend %message-shared;
+  }
+  
+  .success {
+    @extend %message-shared;
+    border-color: green;
+  }
+  
+  .error {
+    @extend %message-shared;
+    border-color: red;
+  }
+  
+  .warning {
+    @extend %message-shared;
+    border-color: yellow;
+  }
+
+  
