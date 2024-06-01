@@ -1,19 +1,34 @@
+<!-- js -->
 <script>
+import AppHeader from './components/AppHeader.vue';
+import AppFooter from './components/AppFooter.vue';
+import ProductsList from './components/ProductsList.vue';
 
+export default {
+    name: 'MyApp',
+    components: {
+        AppHeader,
+        AppFooter,
+        ProductsList,
+    },
+};
 </script>
 
+<!-- html -->
 <template>
-<div>inizio esercizio</div>
+    <AppHeader />
+    <main>
+        <ProductsList />
+    </main>
+    <AppFooter />
 </template>
 
 
+<!-- css -->
 <!-- con lang si può creare css anche su app principale -->
 <style lang="scss" scoped>
 // importo qui con @use il main.scss 
-body {
-    background-color: aqua;
-}
-div {
+header {
     color: red;
 }
 </style>

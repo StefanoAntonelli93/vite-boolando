@@ -1,0 +1,14 @@
+// con @use mettiamo as *, con @import non serve
+
+@use "./partials/reset" as *;
+@use "./partials/variables" as *;
+@import "./partials/mixin";
+
+body {
+  background-color: $body-bg-color;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
