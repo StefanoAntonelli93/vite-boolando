@@ -19,9 +19,9 @@ export default {
                 <div class="product" v-for="(product, index) in products" :key="index">
                     <!-- public + interpolazione per prendere le immagini dal file json -->
                     <img :src="`/images/${product.frontImage}`" alt="">
-                    <h4>{{ product.brand }}</h4>
-                    <h2>{{ product.name }}</h2>
-                    <h3>{{ product.price }} &euro;</h3>
+                    <p class="brand">{{ product.brand }}</p>
+                    <p class="name">{{ product.name }}</p>
+                    <p class="price">{{ product.price }} &euro;</p>
                 </div>
             </div>
         </div>
@@ -33,7 +33,7 @@ export default {
 
 section {
     background-color: $section-color;
-    padding: 50px 0;
+    padding: 50px 0 20px 0;
 
     .products {
         display: flex;
@@ -43,11 +43,27 @@ section {
             background-color: white;
             width: calc(100% / 3);
             border: 5px solid $border-color;
+            margin-bottom: 30px;
 
             img {
                 max-width: 100%;
                 background-repeat: no-repeat;
                 background-size: cover;
+            }
+
+            .brand {
+                color: gray;
+            }
+
+            .price {
+                color: red;
+                font-weight: 700;
+            }
+
+            .name {
+                font-weight: 700;
+                font-size: large;
+                text-transform: uppercase;
             }
         }
     }
