@@ -1,12 +1,14 @@
 <script>
 import AppLogo from './AppLogo.vue';
 import HeaderMenu from './HeaderMenu.vue';
+import IconMenu from './IconMenu.vue';
 
 export default {
     name: 'AppHeader',
     components: {
         AppLogo,
         HeaderMenu,
+        IconMenu,
     },
 };
 </script>
@@ -16,7 +18,7 @@ export default {
         <div class="container">
             <HeaderMenu />
             <AppLogo />
-            icon menu
+            <IconMenu />
         </div>
     </header>
 </template>

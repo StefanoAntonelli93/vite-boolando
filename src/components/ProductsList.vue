@@ -41,9 +41,8 @@ section {
 
         .product {
             background-color: white;
-            width: calc(100% / 4);
+            width: calc(100% / 3);
             border: 5px solid $border-color;
-            text-align: center;
 
             img {
                 max-width: 100%;

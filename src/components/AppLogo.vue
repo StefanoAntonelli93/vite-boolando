@@ -5,8 +5,8 @@ export default {
 </script>
 
 <template>
-    <a>
-        <img src="/images/boolean-logo.png" alt="boolando">
+    <a href="/">
+        <img src="/images/boolean-logo.png" alt="boolando-logo">
     </a>
 </template>
 
