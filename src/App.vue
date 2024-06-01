@@ -27,8 +27,4 @@ export default {
 <!-- css -->
 <!-- con lang si può creare css anche su app principale -->
 <style lang="scss" scoped>
-// importo qui con @use il main.scss 
-header {
-    color: red;
-}
-</style>
+// importo qui con @use il main.scss </style>

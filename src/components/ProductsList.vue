@@ -17,8 +17,11 @@ export default {
         <div class="container">
             <div class="products">
                 <div class="product" v-for="(product, index) in products" :key="index">
-                    <img :src="product.image" alt="">
+                    <!-- public + interpolazione per prendere le immagini dal file json -->
+                    <img :src="`/images/${product.frontImage}`" alt="">
+                    <h4>{{ product.brand }}</h4>
                     <h2>{{ product.name }}</h2>
+                    <h3>{{ product.price }} &euro;</h3>
                 </div>
             </div>
         </div>
@@ -29,7 +32,6 @@ export default {
 @use '../assets/scss/partials/variables.scss' as *;
 
 section {
-    height: 300px;
     background-color: $section-color;
     padding: 50px 0;
 
@@ -38,11 +40,16 @@ section {
         flex-wrap: wrap;
 
         .product {
-            height: 150px;
             background-color: white;
             width: calc(100% / 4);
-            border: 2px solid $main-color;
+            border: 5px solid $border-color;
             text-align: center;
+
+            img {
+                max-width: 100%;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
         }
     }
 }

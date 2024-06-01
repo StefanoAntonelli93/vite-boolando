@@ -14,16 +14,26 @@ export default {
 <template>
     <header>
         <div class="container">
-            <AppLogo />
             <HeaderMenu />
+            <AppLogo />
+            icon menu
         </div>
     </header>
 </template>
 
 <!-- con scoped questi stili vivono solo all'interno di AppHeader -->
-<style scoped>
+<style scoped lang="scss">
+@use '../assets/scss/partials/variables.scss' as *;
+
+header {
+    background-color: $header-color;
+
+}
+
 .container {
     text-align: center;
-    display: block;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 </style>

@@ -4,14 +4,14 @@ export default {
 };
 </script>
 
-<template>logo
-    <div>
+<template>
+    <a>
         <img src="/images/boolean-logo.png" alt="boolando">
-    </div>
+    </a>
 </template>
 
 <style>
 img {
-    background-color: coral;
+    max-width: 20%;
 }
 </style>

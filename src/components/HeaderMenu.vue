@@ -6,12 +6,10 @@ export default {
 
 <template>
     <nav>
-        <ul>menu
-            <li><a href="" class="active">li</a></li>
-            <li><a href="">li</a></li>
-            <li><a href="">li</a></li>
-            <li><a href="">li</a></li>
-            <li><a href="">li</a></li>
+        <ul>
+            <li><a href="" class="active">Donna</a></li>
+            <li><a href="">Uomo</a></li>
+            <li><a href="">Bambini</a></li>
         </ul>
     </nav>
 </template>
@@ -28,11 +26,10 @@ ul {
     a {
         display: inline-block;
         padding: 20px 10px;
-        background-color: antiquewhite;
-        color: $text-color;
+        color: $text-header-color;
 
         &.active {
-            background-color: $main-color;
+            background-color: $active-color;
         }
     }
 }
