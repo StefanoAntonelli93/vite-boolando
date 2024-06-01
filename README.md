@@ -1,13 +1,14 @@
 Esercizio di oggi: Vite Boolando
-PARTE 1
-Descrizione
 
-Create un nuovo progetto utilizzando Vite e Vue 3. Definite i componenti necessari per strutturare il layout.
+<!-- PARTE 1
+Descrizione -->
+
+<!-- Create un nuovo progetto utilizzando Vite e Vue 3. Definite i componenti necessari per strutturare il layout.
 Non esagerate con i componenti: less is more.
 L’esercizio già lo conoscete (html-css-boolando), ma la sfida è suddividerlo in componenti e provare a sfruttare SASS per rendere il nostro stile più leggibile e flessibile (di quali variabili potreste avere bisogno?).
 
 Bonus
-Popoliamo le voci dell’header (sia le tre voci testuali che le tre icone) dinamicamente.
+Popoliamo le voci dell’header (sia le tre voci testuali che le tre icone) dinamicamente. -->
 
 PARTE 2
 Descrizione
@@ -18,3 +19,11 @@ Aggiungiamo al componente Card la / le props necessarie affinché possa mostrare
 
 Bonus
 Facciamo in modo che il cuore nella card del prodotto sia colorato o vuoto a seconda del valore della proprietà “isInFavourites”.
+
+<div class="product" v-for="(product, index) in products" :key="index">
+    <!-- public + interpolazione per prendere le immagini dal file json -->
+    <img :src="`/images/${product.frontImage}`" alt="">
+    <p class="brand">{{ product.brand }}</p>
+    <p class="name">{{ product.name }}</p>
+    <p class="price">{{ product.price }} &euro;</p>
+</div>

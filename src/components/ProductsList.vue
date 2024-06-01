@@ -1,8 +1,12 @@
 <script>
 import prodotti from '../data/boolando.json';
+import CardElement from './CardElement.vue';
 
 export default {
     name: 'ProductsList',
+    components: {
+        CardElement,
+    },
     data() {
         return prodotti
     },
@@ -16,13 +20,9 @@ export default {
     <section>
         <div class="container">
             <div class="products">
-                <div class="product" v-for="(product, index) in products" :key="index">
-                    <!-- public + interpolazione per prendere le immagini dal file json -->
-                    <img :src="`/images/${product.frontImage}`" alt="">
-                    <p class="brand">{{ product.brand }}</p>
-                    <p class="name">{{ product.name }}</p>
-                    <p class="price">{{ product.price }} &euro;</p>
-                </div>
+                <!-- proprietà padre ereditato da primo figlio e SOLO primo figlio -->
+                <CardElement v-for="(product, index) in products" :key="index" :image="`/images/${product.frontImage}`"
+                    :brand="product.brand" :name="product.name" :price="product.price" />
             </div>
         </div>
     </section>
@@ -45,22 +45,22 @@ section {
             border: 5px solid $border-color;
             margin-bottom: 30px;
 
-            img {
+            :deep(img) {
                 max-width: 100%;
                 background-repeat: no-repeat;
                 background-size: cover;
             }
 
-            .brand {
+            :deep(.brand) {
                 color: gray;
             }
 
-            .price {
+            :deep(.price) {
                 color: red;
                 font-weight: 700;
             }
 
-            .name {
+            :deep(.name) {
                 font-weight: 700;
                 font-size: large;
                 text-transform: uppercase;
