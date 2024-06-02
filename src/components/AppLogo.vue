@@ -6,6 +6,7 @@ export default {
 
 <template>
     <a href="/">
+        <!-- CARICO IMMAGINE LOGO DA CARTELLA PUBLIC > /IMAGES  -->
         <img src="/images/boolean-logo.png" alt="boolando-logo">
     </a>
 </template>

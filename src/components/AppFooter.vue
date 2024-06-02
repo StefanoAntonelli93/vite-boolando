@@ -33,6 +33,7 @@ export default {
 
 
 <style scoped lang="scss">
+// richiamo variables.scss
 @use '../assets/scss/partials/variables.scss' as *;
 
 footer {

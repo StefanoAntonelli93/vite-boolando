@@ -1,5 +1,7 @@
 <script>
+// importo file json in lista prodotti 
 import prodotti from '../data/boolando.json';
+// importo componente CardElement in ProductList
 import CardElement from './CardElement.vue';
 
 export default {
@@ -21,6 +23,8 @@ export default {
         <div class="container">
             <div class="products">
                 <!-- proprietà padre ereditato da primo figlio e SOLO primo figlio -->
+                <!-- ciclo v-for per iterare ogni oggetto della lista -->
+                <!-- creo link per props in CardElement -->
                 <CardElement v-for="(product, index) in products" :key="index" :image="`/images/${product.frontImage}`"
                     :brand="product.brand" :name="product.name" :price="product.price" />
             </div>
@@ -29,6 +33,7 @@ export default {
 </template>
 
 <style scoped lang="scss">
+// uso variables.scss
 @use '../assets/scss/partials/variables.scss' as *;
 
 section {

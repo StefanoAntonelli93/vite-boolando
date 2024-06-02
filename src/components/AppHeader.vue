@@ -1,4 +1,5 @@
 <script>
+// importo componenti che formano header
 import AppLogo from './AppLogo.vue';
 import HeaderMenu from './HeaderMenu.vue';
 import IconMenu from './IconMenu.vue';
@@ -25,6 +26,7 @@ export default {
 
 <!-- con scoped questi stili vivono solo all'interno di AppHeader -->
 <style scoped lang="scss">
+// richiamo variables.scss
 @use '../assets/scss/partials/variables.scss' as *;
 
 header {

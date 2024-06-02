@@ -1,8 +1,12 @@
 // con @use mettiamo as *, con @import non serve
+// richiamo le partials che mi occorrono
 
 @use "./partials/reset" as *;
 @use "./partials/variables" as *;
 @import "./partials/mixin";
+
+// con @use usare 'as *'
+// con @import non usare niente
 
 body {
   background-color: $body-bg-color;
